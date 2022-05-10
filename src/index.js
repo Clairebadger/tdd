@@ -5,3 +5,13 @@ module.exports = {
   // Grade: require('./grade')
   // School: require('./school'),
 }
+
+// Teacher Class
+
+// Student Class
+
+// Individual Class
+
+// Grade Class
+
+// School Class
