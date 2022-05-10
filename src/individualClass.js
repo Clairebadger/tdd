@@ -1,20 +1,23 @@
-class individualClass {
-    constructor(name, subjectTaught, universityAttended, yearsAsTeacher) {
-        this.name = name,
-        this.subjectTaught = subjectTaught,
-        this.universityAttended = universityAttended,
-        this.yearsAsTeacher = yearsAsTeacher
+class IndividualClass {
+    constructor(subject, gradeLevel, teacher, students) {
+        this.subject = subject
+        this.teacher = teacher
+        this.gradeLevel = gradeLevel
+        this.students = students
     }
-    updateTeacherName(name){
-        this.name = name;
-     }
-    changeSubjectTaught(subject){
-       this.subjectTaught = subject;
+    updateSubject(newSubj){
+        this.subject =newSubj
     }
-    updateYearsAsTeacher(){
-      this.yearsAsTeacher += 1;
+    changeTeacher(teacher){
+        this.teacher = teacher
     }
-    
+    addStudent(newstudent){
+        this.students.push(newstudent)
+    }
+    removeStudent(student){
+        let i = this.students.findIndex(x => x == student);
+        this.students.splice(i, 1);
+    }
   }
   
-  module.exports = Teacher;
+  module.exports = IndividualClass;

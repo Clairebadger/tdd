@@ -38,7 +38,7 @@ class Student {
   }
 
   removeActivity(activity) {
-    let activityToDelete = this.activities.findIndex(x => x == 'reading');
+    let activityToDelete = this.activities.findIndex(x => x == activity);
     this.activities.splice(activityToDelete, 1);
   }
 

@@ -1,0 +1,1 @@
+//module.exports = school; // keep at bottom
