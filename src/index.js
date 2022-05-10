@@ -3,6 +3,6 @@ module.exports = {
   Student: require('./student'),
   IndividualClass: require('./individualClass'),
   Grade: require('./grade'),
-  //School: require('./school')
+  School: require('./school')
 }
 

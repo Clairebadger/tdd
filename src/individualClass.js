@@ -1,5 +1,6 @@
 class IndividualClass {
-    constructor(subject, gradeLevel, teacher, students) {
+    
+    constructor(subject, gradeLevel, teacher, students) {   // takes in teacher and student instances of the classes
         this.subject = subject
         this.teacher = teacher
         this.gradeLevel = gradeLevel

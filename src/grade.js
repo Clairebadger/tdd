@@ -11,14 +11,43 @@ class Grade {
     }
 
     getStudentCount(){
-        return 
+        let count = 0;
+        for(let myclass of this.individualClasses){
+            count += myclass.students.length
+        }
+        return count
     }
-    calculateGradeAverage(){
-        return
+
+    calculateGradeAverage() {
+    let totalgrades = []
+    for (let thisclass of this.individualClasses){
+      for (let mystudent of thisclass.students) {
+          totalgrades = totalgrades.concat(mystudent.testScores)
+      }
     }
+
+    return totalgrades.reduce((total, currentScore) => total += currentScore) / totalgrades.length;   // calculates average
+    }
+
+    
     addIndividualClass(newclass){
-        this.individualClasses(newclass)
+        this.individualClasses.push(newclass)
     }
+    
+    removeIndividualClass(classToRemove){
+        /*
+        for(let i = 0; i < this.individualClasses.length; i++){
+            if (this.individualClasses[i].subject === classToRemove.subject &&
+                this.individualClasses[i].teacher === classToRemove.teacher &&
+                this.individualClasses[i].gradeLevel === classToRemove.gradeLevel &&
+                this.individualClasses[i].students === classToRemove.students){
+                    let index = i 
+                }
+        }*/
+        let index = this.individualClasses.findIndex(x => x == classToRemove);
+        this.individualClasses.splice(index, 1);
+    }
+
   }
 
 module.exports = Grade; // keep at bottom
